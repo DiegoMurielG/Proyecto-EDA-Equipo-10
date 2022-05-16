@@ -7,4 +7,6 @@ Herrera Romero Juan Pablo
 Muriel González Diego
 Olvera Negrete Elliot Eusebio
 
+El diagrama de clases y el diagrama de flujo, se encuentran en la siguiente liga
+[UML y Diagrama de Flujo del proyecto](https://drive.google.com/file/d/1-O5HWqjPut6douphPU-ms_9XVZwCQrEj/view?usp=sharing)
 
