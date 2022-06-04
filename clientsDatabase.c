@@ -120,7 +120,7 @@ void Ticket_Delete_Node(ticket_node* this){
 		printf("\nNo hay stock suficiente");//fprintf("stderr,"\nNo hay stock suficiente");
 //#endif
 	} else if( howmany<0 ){
-		printf("\nDATO NO VÁLIDO (%d)\nOPERACIÓN FINALIZADA", howmany);
+		printf("\nDATO NO VÃLIDO (%d)\nOPERACIÃ“N FINALIZADA", howmany);
 		
 	} else {
 		this->product_stock-=howmany;
@@ -209,7 +209,7 @@ void DLL_Ticket_Cursor_Prev(ticket_DLL* this){
 /// ELIMINA EL NODO EN FRONT
 
 /**
- * @brief Elimina el producto de la DLL señalado por Front.
+ * @brief Elimina el producto de la DLL seÃ±alado por Front.
  *   
  * @param this DLL de  tickets.
  *
@@ -232,7 +232,7 @@ void DLL_Ticket_Pop_Front(ticket_DLL* this){
 }
 
 /**
- * @brief Elimina el producto de la DLL señalado por Back.
+ * @brief Elimina el producto de la DLL seÃ±alado por Back.
  *    
  * @param this DLL de  tickets.
  *
@@ -254,7 +254,7 @@ void DLL_Ticket_Pop_Back(ticket_DLL* this){
 }
 
 /**
- * @brief Elimina el producto de la DLL señalado por Cursor.
+ * @brief Elimina el producto de la DLL seÃ±alado por Cursor.
  *  
  * @param this DLL de  tickets.
  *
@@ -307,7 +307,7 @@ void DLL_Ticket_Push_Front(ticket_DLL* this, int quantityBuyed, char name[] ){
 }
 
 /**
- * @brief Inserta un ticket a la DLL señalado por Back.
+ * @brief Inserta un ticket a la DLL seÃ±alado por Back.
  *    
  * @param this DLL de  tickets.
  * @param quantityBuyed cantidad vendida de product.
@@ -330,11 +330,11 @@ void DLL_Ticket_Push_Back(ticket_DLL* this, int quantityBuyed, char name[] ){
 }
 
 /**
- * @brief Regresa el nodo ticket señalado por cursor.
+ * @brief Regresa el nodo ticket seÃ±alado por cursor.
  *
  * @param this DLL de  tickets.
  *
- * @return el ticket señalado por cursor.
+ * @return el ticket seÃ±alado por cursor.
  */
 ticket_node* DLL_Ticket_Get(ticket_DLL* this){
 	return this->cursor;
@@ -356,7 +356,7 @@ bool DLL_Ticket_Is_Empty(ticket_DLL* this){
 }
 
 /**
- * @brief Regresa el tamaño de la DLL.
+ * @brief Regresa el tamaÃ±o de la DLL.
  *
  * @param this DLL de  tickets.
  *
@@ -495,7 +495,7 @@ void Customer_Delete_Node(customer_node* this) {
 		printf("\nNo hay stock suficiente");//fprintf("stderr,"\nNo hay stock suficiente");
 //#endif
 	} else if( howmany<0 ){
-		printf("\nDATO NO VÁLIDO (%d)\nOPERACIÓN FINALIZADA", howmany);
+		printf("\nDATO NO VÃLIDO (%d)\nOPERACIÃ“N FINALIZADA", howmany);
 		
 	} else {
 		this->product_stock-=howmany;
@@ -590,7 +590,7 @@ void DLL_Customer_Cursor_Prev(customer_DLL* this){
 /// ELIMINA EL NODO EN FRONT
 
 /**
- * @brief Elimina el customer de la DLL señalado por Front.
+ * @brief Elimina el customer de la DLL seÃ±alado por Front.
  *   
  * @param this DLL de  customers.
  *
@@ -613,7 +613,7 @@ void DLL_Customer_Pop_Front(customer_DLL* this){
 }
 
 /**
- * @brief Elimina el customer de la DLL señalado por Back.
+ * @brief Elimina el customer de la DLL seÃ±alado por Back.
  *    
  * @param this DLL de  customers.
  *
@@ -636,7 +636,7 @@ void DLL_Customer_Pop_Back(customer_DLL* this){
 
 
 /**
- * @brief Elimina el customer de la DLL señalado por Cursor.
+ * @brief Elimina el customer de la DLL seÃ±alado por Cursor.
  *  
  * @param this DLL de  customers.
  *
@@ -723,11 +723,11 @@ void DLL_Customer_Cursor_Push_Ticket(customer_DLL* this, ticket_DLL* thisTicket)
 }
 
 /**
- * @brief Regresa el nodo customer señalado por cursor.
+ * @brief Regresa el nodo customer seÃ±alado por cursor.
  *
  * @param this DLL de  customers.
  *
- * @return El customer señalado por cursor.
+ * @return El customer seÃ±alado por cursor.
  */
 customer_node* DLL_Customer_Get(customer_DLL* this){
 	return this->cursor;
@@ -748,7 +748,7 @@ bool DLL_Customer_Is_Empty(customer_DLL* this){
 }
 
 /**
- * @brief Regresa el tamaño de la DLL.
+ * @brief Regresa el tamaÃ±o de la DLL.
  *
  * @param this DLL de  customers.
  *
@@ -849,7 +849,7 @@ bool DLL_Customer_Find(customer_DLL* this,int id ){
 	
 	if( this->len == 0 ){
 		#ifdef DEBUG
-			fprintf( stderr, "No buscar nada en DB vacía\n" );
+			fprintf( stderr, "No buscar nada en DB vacÃ­a\n" );
 		#endif
 	}else{
 		DLL_Customer_Cursor_Front( this );
@@ -903,14 +903,14 @@ void DLL_Customer_Print(customer_DLL* this){
 }
 
 /**
- * @brief Imprime todos los campos de customer señalado por el cursor.
+ * @brief Imprime todos los campos de customer seÃ±alado por el cursor.
  *
  * @param this DLL de  customers.
  */
 void DLL_Customer_Cursor_Print(customer_DLL* this) {
 	assert(this->cursor != NULL);
-	printf("\n\tID = %i\t|", this->cursor->id );
-	printf("|\tNAME = %s\t|", this->cursor->name );
+	printf("\n\tID = %i", this->cursor->id );
+	printf("\tNAME = %s", this->cursor->name );
 	/*if( this->cursor->lenTickets == 0 ){
 		printf("||\n\tTOTAL OF TICKETS = 0\t||");
 	}else{
