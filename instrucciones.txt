@@ -19,7 +19,7 @@
  *		  |	Muriel Gonz?lez Diego	(Equipo 10)	|
  */
  
- Una vez estando dentro del directorio donde se compilara y correrá la aplicación, colocar las siguientes instrucciones de compilación:
+ Una vez estando dentro del directorio donde se compilará y correrá la aplicación, colocar las siguientes instrucciones de compilación:
  
  	gcc -Wall -std=c99 companyMain.c warehouse.c clientsDatabase.c company.c -o companyOut
  	
